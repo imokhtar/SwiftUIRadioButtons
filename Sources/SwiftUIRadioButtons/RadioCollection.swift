@@ -49,6 +49,7 @@ internal struct RadioCollection<Data, Content>: View where Data: RandomAccessCol
 
 @available(iOS 13.0, *)
 public extension View {
+    /// sets the foreground color of the radio image in any `RadioCollection` view
     func radioForegroundColor(_ color: Color) -> some View {
         self.modifier(RadioForegroundColor(color: color))
     }

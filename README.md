@@ -48,4 +48,4 @@ struct SelectCountryView: View {
 }
 ```
 
-[result](Sources/radio_example.gif)
+![ Alt text](Sources/radio_example.gif)

@@ -15,27 +15,34 @@ a structure that renders a vertical collection of radio buttons given a collecti
 
 
 ```
-struct CountryPresentationEntity: Identifiable {
+struct Country: Identifiable {
     let id = UUID()
     var imageName: String
     var label: String
 }
 
 
-struct CountryAndLanguageView: View {
-    @State private var selectedCountry: CountryPresentationEntity? = nil
-    
-    var countries: [CountryPresentationEntity] = [
-        CountryPresentationEntity(imageName: "aue_flag", label: "Egypt"),
-        CountryPresentationEntity(imageName: "aue_flag", label: "AUE"),
-        CountryPresentationEntity(imageName: "aue_flag", label: "KSA"),
+struct SelectCountryView: View {
+    @State private var selectedCountry: Country? = nil
+    private let countries = [
+        Country(imageName: "Egypt", label: "Egypt"),
+        Country(imageName: "aue_flag", label: "UAE"),
+        Country(imageName: "Saudi-Arabia", label: "KSA"),
     ]
     
     var body: some View {
         VStack {
-            HRadioCollection(selectedData: $selectedCountry, data: countries, content: radioContent)
-                .radioForegroundColor(.yellow)
-                .foregroundColor(.red)
+            Text(selectedCountry?.label ?? "No selection yet")
+            HRadioCollection(selectedData: $selectedCountry, data: countries) { country in
+                HStack {
+                    Image(country.imageName)
+                    Text(country.label)
+                        .font(Font.system(size: 14.relativeHeight))
+                        .bold()
+                }
+            }
+            .radioForegroundColor(.red)
+            .padding()
         }
     }
 }

@@ -47,3 +47,7 @@ struct SelectCountryView: View {
     }
 }
 ```
+
+result:
+
+(Sources/radio_example.gif)

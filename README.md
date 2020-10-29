@@ -1,3 +1,7 @@
 # SwiftUIRadioButtons
 
-A description of this package.
+Radio buttons collection views written puerly in SwiftUI follwing its philshophy.
+
+## Components:
+
+### HRadioCollection:

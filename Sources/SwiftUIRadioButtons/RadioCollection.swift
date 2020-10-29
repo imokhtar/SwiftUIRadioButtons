@@ -64,12 +64,12 @@ internal struct RadioForegroundColor: ViewModifier {
 }
 
 @available(iOS 13.0, *)
-struct RadioForegroundColorEnvironmentKey: EnvironmentKey {
+internal struct RadioForegroundColorEnvironmentKey: EnvironmentKey {
     static var defaultValue: Color = .blue
 }
 
 @available(iOS 13.0, *)
-extension EnvironmentValues {
+internal extension EnvironmentValues {
     var radioButtonColor: Color {
         get { self[RadioForegroundColorEnvironmentKey.self] }
         set { self[RadioForegroundColorEnvironmentKey.self] = newValue }

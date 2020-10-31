@@ -48,4 +48,4 @@ struct SelectCountryView: View {
 }
 ```
 
-![ Alt text](Sources/radio_example.gif)
+![ Alt text](https://github.com/imokhtar/SwiftUIRadioButtons/blob/main/Sources/radio_example.gif)

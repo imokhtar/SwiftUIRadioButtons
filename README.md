@@ -17,17 +17,17 @@ a structure that renders a vertical collection of radio buttons given a collecti
 ```
 struct Country: Identifiable {
     let id = UUID()
-    var imageName: String
-    var label: String
+    let imageName: String
+    let label: String
 }
 
 
 struct SelectCountryView: View {
     @State private var selectedCountry: Country? = nil
     private let countries = [
-        Country(imageName: "Egypt", label: "Egypt"),
+        Country(imageName: "egypt_flag", label: "Egypt"),
         Country(imageName: "aue_flag", label: "UAE"),
-        Country(imageName: "Saudi-Arabia", label: "KSA"),
+        Country(imageName: "ksa_flag", label: "KSA"),
     ]
     
     var body: some View {

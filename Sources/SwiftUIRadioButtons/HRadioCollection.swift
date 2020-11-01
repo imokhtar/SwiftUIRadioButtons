@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
 /// a structure that renders a horizontal collection of radio buttons given a collection of identifaiable data.
+@available(iOS 13.0, *)
 public struct HRadioCollection<Data, Content>: View where Data: RandomAccessCollection, Content: View, Data.Element: Identifiable {
     @Binding private var selectedData: Data.Element?
     private let data: Data
